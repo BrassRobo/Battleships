@@ -39,6 +39,26 @@ public class EnemyAI
  {
 	 if(acquired==false) //If You Don't have a target
 	 {
+		 if(enemyBoard.hasChar('H')) //You sunk a ship but managed to hit another ship.
+		 {
+			 System.out.println("FOUND AN H");
+			int enemyH=enemyBoard.getHorizontal();
+			int enemyW=enemyBoard.getVerticle();
+			for(int i=0;i<enemyW;i++)
+			{
+				for(int j=0;j<enemyH;j++)
+				{
+					if(enemyBoard.readCell(i, j)=='H')
+					{
+					System.out.println("FOUND AT "+i+" "+j);
+					 acquired=true; 
+					 acquiredX=i;
+					 acquiredY=j;
+					 return this.fireFourAround();
+					}
+				}
+			}
+		 }
 //		 if(checkForOrphans==true)
 //		 {
 //			 if(checkForOrphans)
