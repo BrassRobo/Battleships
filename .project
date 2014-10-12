@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Battlseships2</name>
+	<name>Battleships2</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1412785870970</id>
+			<id>1413140023879</id>
 			<name></name>
 			<type>26</type>
 			<matcher>

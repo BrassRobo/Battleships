@@ -282,12 +282,20 @@ public FactoryResponse addShip(int x,int y, int shipSize, boolean horizontal)
 	Ship ship = new Ship();
 	if(horizontal)
 	{
+		if(x+shipSize>width)//Keeps ships from being placed off the map
+		{
+			return FactoryResponse.INVALID;
+		}
 		for(int i=0; i<shipSize;i++)
 		{
 			ship.addSquare(x+i, y);
 		}
 	}else
 	{
+		if(y+shipSize>height)//Keeps ships from being placed off the map
+		{
+			return FactoryResponse.INVALID;
+		}
 		for(int i=0; i<shipSize;i++)
 		{
 			ship.addSquare(x, y+i);

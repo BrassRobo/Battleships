@@ -37,7 +37,6 @@ public class EnemyAI
  }
  public GameResponse fire() throws WrongInputException
  {
-	 
 	 if(acquired==false) //If You Don't have a target
 	 {
 //		 if(checkForOrphans==true)
